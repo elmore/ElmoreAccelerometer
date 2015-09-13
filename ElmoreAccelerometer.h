@@ -1,16 +1,20 @@
 
-class AveragingBuffer
+class ElmoreAccelerometer
 {
 	public:
-		AveragingBuffer(int size);
+		ElmoreAccelerometer(int size);
 		
 		void Push(int val);
 		
 		int Average();
 		
 	private:
-		int _size;
 		int _buff[];
+	
+		int _size;
+		int _count;
+		int _total;
+		
 		int *_index;
 		int *_tail;
 };
